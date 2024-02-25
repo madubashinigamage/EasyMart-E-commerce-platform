@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyMart - Checkout</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION START -->
+    <nav id="navigation" class="z-50 shadow-lg bg-white flex justify-between items-center py-3 w-full">
+        <!-- LOGO -->
+        <div class="">
+            <a href="home.html"><img class="text-white w-16 ms-10 cursor-pointer" src="images/logo.png"
+                    alt=""></a>
+        </div>
+
+        <!-- LINKS -->
+        <ul class="md:flex space-x-4 me-10 text-black font-semibold cursor-pointer hidden">
+            <a href="home.html">
+                <li class="hover:underline hover:underline-offset-4 cursor-pointer p-3">HOME</li>
+            </a>
+            <a href="about.html">
+                <li class="hover:underline hover:underline-offset-4  p-3">ABOUT</li>
+            </a>
+            <a href="products.html">
+                <li class="hover:underline hover:underline-offset-4  p-3">PRODUCTS</li>
+            </a>
+            <!-- SEARCH -->
+            <div class="searchbox hidden mt-2">
+                <input
+                    class="focus:outline-none border border-t-0 border-r-0 border-l-0 border-b-black bg-transparent w-96 text-center"
+                    type="text" placeholder="Search">
+
+            </div>
+            <!-- SEARCH ICON -->
+            <li class=" p-3" id="searchbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>
+            <!-- CART ICON -->
+            <a href="cart.html">
+                <li class="uppercase relative p-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                    <p class="cart-items absolute top-0 right-0 bg-blue-700 px-2 rounded-full text-white">0</p>
+                </li>
+            </a>
+            <!-- ACCOUNT ICON -->
+            <a href="index.html">
+                <li class=" p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+
+                </li>
+            </a>
+        </ul>
+
+        <!-- BURGER ICON  -->
+        <ul class="text-white md:hidden me-5 flex space-x-3" id="burger">
+            <!-- SEARCH ICON -->
+            <!--<li id="searchbtnn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>-->
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+            </li>
+        </ul>
+
+
+    </nav>
+    <!-- NAVIGATION END -->
+
+    <!-- DIVIDER START-->
+    <div class="shadow-xl w-full py-3 mb-10">
+        <p class="text-center text-2xl font-semibold italic">EasyMart / Checkout</p>
+    </div>
+    <!-- DIVIDER END -->
+<div class="grid grid-cols-12 ms-80">
+
+    <div class="border col-span-8 shadow-md pb-5">
+        <h3 class="text-xl font-semibold p-5">Payment Method</h3>
+        <div class="grid grid-cols-12">
+
+            <div class="flex justify-center col-span-6 rounded-lg mx-10 hover:bg-gray-100 transition duration-200 h-28">
+                <img class="object-contain" width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/2560px-Paytm_Logo_%28standalone%29.svg.png" alt="paytm">
+            </div>
+
+            <div class="flex justify-center col-span-6 rounded-lg mx-10 hover:bg-gray-100 transition duration-200 h-28">
+                <img  class="object-contain" width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="visa">
+            </div>
+
+        </div>
+
+        <div class="mx-10 mt-5">
+            <input type="text" placeholder="Card Holder Name" class="border focus:outline-none focus:ring-2 h-10 rounded-lg ps-5 w-full">
+        </div>
+
+        <div class="grid grid-cols-12">
+            <div class="flex justify-center col-span-9 rounded-lg mx-10 mt-8">
+                <input type="text" placeholder="Card Number" class="border focus:outline-none focus:ring-2 h-10 rounded-lg ps-5 w-full">
+            </div>
+            <div class="flex justify-center col-span-3 rounded-lg mx-10 mt-8">
+                <input type="text" placeholder="CVV" class="border focus:outline-none focus:ring-2 h-10 rounded-lg ps-5 w-full">
+            </div>
+        </div>
+        <h3 class="ms-12 mt-8">Expiration Date</h3>
+        <div class="grid grid-cols-12">
+            <div class="flex justify-center col-span-4 rounded-lg mx-10 mt-2">
+                <input id="exp" type="text" placeholder="Month"
+                    class="border focus:outline-none focus:ring-2 h-10 rounded-lg ps-5 w-full">
+            </div>
+            <div class="flex justify-center col-span-4 rounded-lg mx-10 mt-2">
+                <input type="text" placeholder="Year" class="border focus:outline-none focus:ring-2 h-10 rounded-lg ps-5 w-full">
+            </div>
+        </div>
+        <div class="bg-green-600 h-10 flex items-center justify-end pe-10 hover:bg-green-700 w-full mt-8 ">
+            <p class="font-semibold text-white">Make Payment ></p>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>

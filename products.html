@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyMart - Products</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body class="bg-white">
+    <!-- NAVIGATION START -->
+    <nav id="navigation" class="z-50 shadow-lg bg-white flex justify-between items-center py-3 w-full">
+        <!-- LOGO -->
+        <div class="">
+            <a href="home.html"><img class="text-white w-16 ms-10 cursor-pointer" src="images/logo.png"
+                    alt=""></a>
+        </div>
+
+        <!-- LINKS -->
+        <ul class="md:flex space-x-4 me-10 text-black font-semibold cursor-pointer hidden">
+            <a href="home.html">
+                <li class="hover:underline hover:underline-offset-4 cursor-pointer p-3">HOME</li>
+            </a>
+            <a href="about.html">
+                <li class="hover:underline hover:underline-offset-4  p-3">ABOUT</li>
+            </a>
+            <a href="products.html">
+                <li class="hover:underline hover:underline-offset-4  p-3">PRODUCTS</li>
+            </a>
+            <!-- SEARCH -->
+            <div class="searchbox hidden mt-2">
+                <input
+                    class="focus:outline-none border border-t-0 border-r-0 border-l-0 border-b-black bg-transparent w-96 text-center"
+                    type="text" placeholder="Search">
+
+            </div>
+            <!-- SEARCH ICON -->
+            <li class=" p-3" id="searchbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>
+            <!-- CART ICON -->
+            <a href="cart.html">
+                <li class="uppercase relative p-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                    <p class="cart-items absolute top-0 right-0 bg-blue-700 px-2 rounded-full text-white">0</p>
+                </li>
+            </a>
+            <!-- ACCOUNT ICON -->
+            <a href="index.html">
+                <li class=" p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+
+                </li>
+            </a>
+        </ul>
+
+        <!-- BURGER ICON  -->
+        <ul class="text-white md:hidden me-5 flex space-x-3" id="burger">
+            <!-- SEARCH ICON -->
+            <li id="searchbtnn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </li>
+        </ul>
+
+
+    </nav>
+    <!-- NAVIGATION END -->
+
+
+    <!-- DIVIDER START-->
+    <div class="shadow-xl w-full py-3 mb-10">
+        <p class="text-center text-2xl font-semibold italic">EasyMart / Products</p>
+    </div>
+    <!-- DIVIDER END -->
+
+
+    <!-- CONTENT GRID -->
+    <div class="grid grid-cols-12 mb-20 cursor-pointer">
+
+        <div class="col-span-1"></div>
+
+        <!-- VERTICAL NAV -->
+        <section class="col-span-2 h-screen sticky top-0">
+            <input id="searchInput"
+                class="w-52 px-5 rounded-xl py-2 mb-5 mt-5 focus:outline-none focus:ring-4 transition duration-300 bg-gray-200"
+                type="text" placeholder="Search">
+            <ul class="ps-4 space-y-5">
+                <li class="font-semibold text-xl">Categories</li>
+                <li class="hover:underline underline-offset-4">All</li>
+                <li class="hover:underline underline-offset-4">Laptops</li>
+                <li class="hover:underline underline-offset-4">Mobiles</li>
+                <li class="hover:underline underline-offset-4">Shoes</li>
+                <li class="hover:underline underline-offset-4">Home Decors</li>
+                <li class="hover:underline underline-offset-4">Cameras</li>
+                <li class="hover:underline underline-offset-4">Accesories</li>
+            </ul>
+            <ul class="mt-7 ps-4">
+                <li class="py-2 font-semibold text-xl">Comapany</li>
+                <Select class="rounded-md py-1 bg-gray-200 focus:outline-none focus:ring-1">
+                    <option value="">Hp</option>
+                    <option value="">Lenovo</option>
+                    <option value="">Apple</option>
+                    <!--<option value="">Himanshu</option> -->
+                    <option value="">Dell</option>
+                </Select>
+            </ul>
+            <div class=" ps-4 mt-10">
+                <p class="font-semibold text-xl">Price</p>
+                <div>$ <span id="sliderAmount">10</span></div>
+                <input id="slide" type="range" min="100" max="10000" step="1" value="10"
+                    onchange="updateSlider(this.value)">
+
+            </div>
+            <div class="ps-4 mt-5">
+                <label class=" text-lg font-semibold" for="free">Free Shipping</label>
+                <input class="ms-3" type="checkbox" id="free">
+            </div>
+            <button onclick="backtozero()"
+                class="ms-4 px-4 py-2 bg-red-700 text-white mt-5 rounded-xl hover:bg-red-800">Clear
+                Filters</button>
+        </section>
+        <!-- VERTICAL NAV END -->
+
+        <!-- MAIN CONTENT -->
+        <section class=" col-span-8">
+
+            <!-- FEATURED PRODUCTS -->
+            <h2 class="text-center text-5xl font-light py-5 tracking-wide mb-5">Featured Products</h2>
+            <div class="grid grid-cols-12">
+                <!-- CARD 1 -->
+                <div class="containerBox col-span-12 lg:col-span-4">
+                    <div class="card">
+                        <div class="imgBox">
+                            <img src="images/pimg1.png" alt="">
+                        </div>
+                        <div class="contentBox">
+                            <h2> Air Max</h2>
+                            <div class="size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div class="color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="containerBox2 col-span-12 lg:col-span-4">
+                    <div class="card2">
+                        <div class="imgBox2">
+                            <img style="width: 250px;" src="images/pimg2.png" alt="">
+                        </div>
+                        <div class="contentBox2">
+                            <h2>Boat Rockerz 480</h2>
+                            <!-- <div class="size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div> -->
+                            <div class="color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="containerBox3 col-span-12 lg:col-span-4">
+                    <div class="card3">
+                        <div class="imgBox3">
+                            <img style="width: 130px;" src="images/pimg3.png" alt="">
+                        </div>
+                        <div class="contentBox3">
+                            <h2>iPhone 16</h2>
+                            <!-- <div class="size">
+                                <h3>Size :</h3>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div> -->
+                            <div class="color">
+                                <h3>Color :</h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FEATURED PRODUCTS END -->
+
+            <hr class="mt-20">
+
+            <!-- PRODUCTS -->
+            <div class="grid grid-cols-12 mt-20 gap-5 productItems"></div>
+            <!-- <div
+                class="w-96 border rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition ease-in-out duration-300">
+                <img class="h-48 w-full object-cover" src="images/cimg6.jpg" alt="">
+                <div class="flex justify-between px-7 py-1">
+                    <span class="font-semibold text-blue-900">Samsung Galaxy</span>
+                    <span class="font-semibold text-blue-900">$999</span>
+                </div>
+            </div> -->
+            <!-- PRODUCTS END -->
+
+
+
+
+
+        </section>
+        <!-- MAIN CONTENT END -->
+
+        <div class="col-span-1"></div>
+
+    </div>
+    <!-- CONTENT GRID END -->
+
+
+    <!-- FOOTER START -->
+    <footer></footer>
+    <!-- FOOTER END -->
+
+    <script src="app.js"></script>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const namesFromDOM = document.getElementsByClassName("name");
+
+        searchInput.addEventListener("keyup", (event) => {
+            const { value } = event.target;
+
+
+            const searchQuery = value.toLowerCase();
+
+            for (const nameElement of namesFromDOM) {
+
+                let name = nameElement.textContent.toLowerCase();
+                if (name.includes(searchQuery)) {
+                    nameElement.style.display = "block";
+                } else {
+                    nameElement.style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

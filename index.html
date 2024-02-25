@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyMart - Login</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="./jquery-3.6.4.min.js"></script>
+</head>
+
+<body class=" bg-gray-50">
+
+    <!-- NAVIGATION START -->
+    <nav id="navigation" class="shadow-lg flex justify-between items-center py-4 w-full">
+        <!-- LOGO -->
+        <div class="">
+            <a href="home.html"><img class="text-white w-16 ms-10 cursor-pointer" src="images/logo.png"
+                    alt=""></a>
+        </div>
+
+        <!-- LINKS -->
+        <ul class="md:flex space-x-10 me-10 text-black font-semibold cursor-pointer hidden">
+            <a href="home.html">
+                <li class="hover:underline hover:underline-offset-4 cursor-pointer">HOME</li>
+            </a>
+            <a href="about.html">
+                <li class="hover:underline hover:underline-offset-4">ABOUT</li>
+            </a>
+            <a href="products.html">
+                <li class="hover:underline hover:underline-offset-4">PRODUCTS</li>
+            </a>
+            <!-- SEARCH -->
+            <div class="searchbox hidden">
+                <input
+                    class="focus:outline-none border border-t-0 border-r-0 border-l-0 border-b-black bg-transparent w-96 text-center"
+                    type="text" placeholder="Search">
+
+            </div>
+            <!-- SEARCH ICON -->
+            <li id="searchbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>
+            <!-- CART ICON -->
+            <a href="cart.html">
+                <li class="uppercase"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                </li>
+            </a>
+            <!-- ACCOUNT ICON -->
+            <a href="index.html">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </li>
+            </a>
+        </ul>
+
+        <!-- BURGER ICON  -->
+        <ul class="text-white md:hidden me-5 flex space-x-3" id="burger">
+            <!-- SEARCH ICON -->
+            <li id="searchbtnn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+            </li>
+        </ul>
+
+
+    </nav>
+    <!-- NAVIGATION END -->
+
+    <!-- LOGIN -->
+    <div class="flex justify-center mt-32">
+
+        <div class="grid grid-cols-12 rounded-xl overflow-hidden shadow-lg ">
+
+            <div class="col-span-7 banner object-cover w-[600px] h-[470px] pt-40 bg-gray-900 transition duration-1000">
+                <p class="text-center maintext bg-gradient-to-r from-white to-transparent text-black leading-snug">
+                    Celebrating Millions of<br> Satisfied Customers! <br>
+                </p>
+            </div>
+
+            <div class="col-span-5 bg-white w-full px-10">
+                <h2 class="text-center text-2xl mt-5 mb-10">Login</h2>
+                <div class="h-8">
+                    <div class="flex">
+                        <label for="number"><svg fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-5 mt-2 me-3">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                            </svg>
+                        </label>
+                        <input onkeyup="val(this)" id="myInput" type="text" placeholder="Mobile Number"
+                            class="w-full border-b-2 border-gray-400 py-1 placeholder:text-gray-400 focus:outline-none">
+                    </div>
+                    <div class="ms-8 text-red-600" id="result"></div>
+                </div>
+
+                <a href="home.html"><button id="myButton" type="submit"
+                        class="w-full text-white font-medium py-1 rounded-md bg-blue-500 hover:bg-blue-600 mt-10 ">Login</button></a>
+
+                <p class=" mt-2">Dont have an account yet? <a class="decoration-0 font-medium text-blue-500"
+                        href="">Sign up</a>
+                </p>
+                <p class="text-center font-bold py-7">OR</p>
+
+
+                <!-- GOOGLE BUTTONS -->
+                <div class="space-y-5">
+                    <button
+                        class="px-10 py-2 border flex items-center space-x-5 ms-5 hover:bg-gray-50 transition duration-300 ease-in-out">
+                        <span><img style="width:35px;" src="images/google.png" alt=""></span>
+                        <span>Continue with Google</span>
+                    </button>
+
+                    <button
+                        class="px-10 border flex items-center space-x-5 ms-5 hover:bg-gray-50 transition duration-300 ease-in-out">
+                        <span class="mt-2"><img style="width:32px;" src="images/git.png" alt=""></span>
+                        <span>Continue with Git Hub</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

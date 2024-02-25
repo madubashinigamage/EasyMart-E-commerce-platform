@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "img": "images/cimg1.jpg",
+      "title": "Logitech Mouse",
+      "price": "$150"
+    },
+    {
+      "id": 2,
+      "img": "images/cimg2.jpg",
+      "title": "Himanshu K16",
+      "price": "$50"
+    },
+    {
+      "id": 3,
+      "img": "images/cimg3.jpg",
+      "title": "Boat Rockerz 250",
+      "price": "$200"
+    },
+    {
+      "id": 4,
+      "img": "images/cimg4.jpg",
+      "title": "Sony EarPhones",
+      "price": "$20"
+    },
+    {
+      "id": 5,
+      "img": "images/cimg5.jpg",
+      "title": "Nike Air Max",
+      "price": "$520"
+    },
+    {
+      "id": 6,
+      "img": "images/cimg6.jpg",
+      "title": "Samsung Galaxy",
+      "price": "$999"
+    },
+    {
+      "id": 7,
+      "img": "images/cimg1.jpg",
+      "title": "Logitech Mouse",
+      "price": "$150"
+    },
+    {
+      "id": 8,
+      "img": "images/cimg2.jpg",
+      "title": "Himanshu K16",
+      "price": "$50"
+    },
+    {
+      "id": 9,
+      "img": "images/cimg3.jpg",
+      "title": "Boat Rockerz 250",
+      "price": "$200"
+    },
+    {
+      "id": 10,
+      "img": "images/cimg4.jpg",
+      "title": "Sony EarPhones",
+      "price": "$20"
+    },
+    {
+      "id": 11,
+      "img": "images/cimg5.jpg",
+      "title": "Nike Air Max",
+      "price": "$520"
+    },
+    {
+      "id": 12,
+      "img": "images/cimg6.jpg",
+      "title": "Samsung Galaxy",
+      "price": "$999"
+    }
+  ]
+}
